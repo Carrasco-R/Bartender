@@ -1,0 +1,200 @@
+/* Basic/Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+*{
+  margin: 0;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+}
+html{
+  background-color: rgb(10,35,63);
+}
+.App{
+  background-color: rgb(10,35,63);
+}
+.content{
+  max-width: 85%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Patrons/Navbar.js */
+.Navbar{
+  padding: 10px;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: 1px solid #dfdfdf;
+  max-width: 85%;
+}
+.Navbar h1{
+  color:white;
+  display: block;
+  font-size: 350%;
+  text-align: center;
+}
+nav{
+  padding: 10px;
+  margin: 20px auto 5px;
+  text-align: center;
+}
+nav a{
+  padding: 0px 20px;
+}
+nav a:hover{
+  color: #c8c8d6;
+}
+
+/* Patrons/Menu.js ----------------------------*/
+form{
+  text-align: center;
+}
+input, option, select{
+  color: black;
+}
+
+.drinks input{
+  display: none;
+}
+.drinkOption .cosmo, .drinkOption .mimosa, .drinkOption .manhattan, .drinkOption .martini{
+  display: inline-block;
+  width: 350px;
+  height: 400px;
+  margin: 0px 4px 10px;
+  padding-top: 5px;
+  background-color: rgb(70, 70, 102);
+  border-radius: 15px;
+}
+.drinkOption{
+  display: inline-block;
+  margin: 20px auto 40px;
+}
+
+.options{
+  background-color: rgb(94, 94, 110);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px auto 40px;
+  width: 40%;
+}
+.options label, .options input, .options select{
+  display: inline-block;
+  margin: 5px 5px;
+}
+
+.info{
+  background-color: rgb(94, 94, 110);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px auto;
+  width: 60%;
+}
+.infoForms label, .infoForms input{
+  display: inline-block;
+  margin-right: 10px;
+}
+.infoForms{
+  text-align: center;
+  margin:auto;
+}
+.info button{
+  display: block;
+  margin: 20px auto 0px;
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  color: black;
+}
+
+.order{
+  background-color: #464666;
+  border-radius: 15px;
+  margin: 10px auto 0px;
+  padding: 20px;
+  width: 800px;
+  border: medium solid #464666;
+}
+.order:hover{
+  border: medium solid cornflowerblue;
+}
+.order h2, .order h3, .order p{
+  display: inline-block;
+  margin: 0px 5px;
+}
+.order h2{
+  width: 100px;
+}
+#displayRocks{
+ width: 110px;
+}
+#displayGarnish{
+  width: 170px;
+}
+#displayRim{
+  width: 90px;
+}
+.order h3{
+  float:inline-end
+}
+.order button{
+  float: right;
+  color: black;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+}
+
+
+
+/*Cosmo*/
+.cosmo{
+  border: thick solid rgba(223, 73, 118, 0);
+}
+.cosmo:hover{
+  border: thick solid rgb(223, 73, 118);
+  background: linear-gradient(#464666,#df4976);
+}
+input[type="radio"]:checked+label .cosmo{
+  border: thick solid rgb(223, 73, 118);
+  background: linear-gradient(#464666,#df4976);
+} 
+
+/*Manhattan*/
+.manhattan{
+  border: thick solid rgba(190, 66, 17, 0);
+}
+.manhattan:hover{
+  border: thick solid rgb(190,66,17);
+  background: linear-gradient(#464666,#be4211);
+}
+input[type="radio"]:checked+label .manhattan{
+  border: thick solid rgb(190,66,17);
+  background: linear-gradient(#464666,#be4211);
+} 
+
+/*Mimosa*/
+.mimosa{
+  border: thick solid rgba(255, 166, 0, 0);
+}
+.mimosa:hover{
+  border: thick solid rgb(255, 166, 0);
+  background: linear-gradient(#464666,#ffa600);
+}
+input[type="radio"]:checked+label .mimosa{
+  border: thick solid rgb(255, 166, 0);
+  background: linear-gradient(#464666,#ffa600);
+} 
+
+/*Martini*/
+.martini{
+  border: thick solid rgba(230, 230, 230, 0);
+}
+.martini:hover{
+  border: thick solid rgb(230, 230, 230);
+  background: linear-gradient(#464666,#e6e6e6);
+}
+input[type="radio"]:checked+label .martini{
+  border: thick solid rgb(230, 230, 230);
+  background: linear-gradient(#464666,#e6e6e6);
+} 
+
