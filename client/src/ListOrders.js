@@ -13,7 +13,16 @@ export default class ListOrders extends Component {
             .get('/all-orders')
             .then((res) => res.data)
             .then((orders) => this.setState({ orders }));
-            console.log(this.state.orders);
+    }
+    handleOrderUp = (id) => {
+        console.log(id);
+        axios({
+            method: 'put',
+            url: '/update',
+            data: {
+              _id: id,
+            }
+          });
     }
     listOrders = () => {
         let order = this.state.orders
@@ -24,7 +33,7 @@ export default class ListOrders extends Component {
             <p id="displayGarnish">Garnish:  {o.garnish}</p>
             <p id="displayRim">Rim: {o.rim}</p>
             <h3>{o.fname + " " + o.lname}</h3>
-            <button>Order Up!</button>
+            <button onClick={() => this.handleOrderUp(o._id)}>Order Up!</button>
         </div>);
         return listItems;
     }
@@ -32,7 +41,6 @@ export default class ListOrders extends Component {
     render() {
         return (
             <div className="OrderList">
-                
                 {this.listOrders()}
             </div>
         )

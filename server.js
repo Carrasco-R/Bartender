@@ -21,6 +21,10 @@ app.listen(port, () => console.log('~~Server listening on port:5000'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: true}));
 
+app.put('/update' , (req, res) => {
+  console.log(req.body);
+  console.log("INSIDE PUT REQUEST");
+})
 
 app.get('/all-orders', (req, res) => {
   Order.find()
@@ -40,7 +44,8 @@ app.post('/add-order', (req, res) => {
     rim: req.body.rim,
     fname: req.body.fname,
     lname: req.body.lname,
-    phoneNumber: req.body.phoneNumber
+    phoneNumber: req.body.phoneNumber,
+    ready: false
   });
   console.log(order);
   order.save()

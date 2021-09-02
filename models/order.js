@@ -29,6 +29,10 @@ const orderSchema = new Schema({
     phoneNumber: {
         type: String,
         required: true
+    },
+    ready: {
+        type: Boolean,
+        required: true
     }
 }, {timestamps: true})
 
